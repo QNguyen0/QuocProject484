@@ -45,24 +45,14 @@ public class SpinningTopScene : Node
     //------------------------------------------------------------------------
     public override void _Ready()
     {
-        // presumably, we would read these parameters from a file
-        //q0IC = 0.92388f;
-        //q0IC = 1f;
-        //q1IC = 0.0f;
-        //q2IC = 0.0f;
-        //q3IC = 0.382682304f;
-        //q3IC = 0.0f;
-
-        //omega1_IC = 1.0f;
-        //omega2_IC = 0.05f;
-        //omega3_IC = 0.0f;
 
         IG1 = 0.18f;
         IG10 = 1.46f;
         IG2 = 0.36f;
         IG3 = 0.18f;
         IG30 = 1.46f;
-        float pivotHeight = 1f;
+        
+        float pivotHeight = 0.5f;
 
 
         Vector3 pivotLoc = new Vector3(0.0f,pivotHeight,0.0f);
@@ -82,10 +72,10 @@ public class SpinningTopScene : Node
         // Set up simulation
         b = new SpinningTop();
         b.IG1 = (double)IG1;
-        //b.IG10 = (double)IG1;
+        b.IG10 = (double)IG1;
         b.IG2 = (double)IG2;
         b.IG3 = (double)IG3;
-        //b.IG30 = (double)IG30;
+        b.IG30 = (double)IG30;
 
         b.q0 = (double)q0IC;
         b.q1 = (double)q1IC;

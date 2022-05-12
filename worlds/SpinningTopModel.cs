@@ -16,9 +16,9 @@ public class SpinningTopModel : Spatial
     private CylinderMesh rodMesh;  // reference to the rod mesh
     private Vector3 RodLoc;
 
-    private float Radius=1.0f;
-    private float Length=2.0f;
-    private float HLength;
+    private float Radius=1.0f;   //Radius of the spinning top
+    private float Length=2.0f;   
+    private float HLength;       
     
 
     //------------------------------------------------------------------------
